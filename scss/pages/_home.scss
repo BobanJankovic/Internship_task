@@ -1,0 +1,193 @@
+.section-hero {
+  width: 100%;
+  height: 87rem;
+  background-image: url(../../images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: all .3s;
+
+  @include respond(tablet) {
+    height: 50rem;
+    background-image: url(../../images/hero-small.jpg);
+  }
+
+  @include respond(phone) {
+    height: 19rem;
+    background-image: url(../../images/hero-mobile.jpg);
+  }
+
+  &__box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -57%);
+    text-align: center;
+    max-width: 91.6rem;
+
+    @include respond(tab-land) {
+      width: 88%;
+      transform: translate(-50%, -52%);
+    }
+  }
+}
+.section-content {
+  width: 100%;
+  padding-top: 9.3rem;
+  padding-bottom: 9.1rem;
+
+  @include respond(tablet) {
+    padding: 3.2rem 0;
+  }
+
+  @include respond(phone) {
+    padding: 1.3rem 0;
+  }
+}
+
+.section-slider {
+  background-image: url(../../images/slide1.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 80rem;
+  position: relative;
+
+  @include respond(tablet) {
+    height: 37.6rem;
+  }
+
+  @include respond(phone) {
+    height: 15.7rem;
+  }
+
+  &__text-box {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-align: center;
+    max-width: 80%;
+
+    @include respond(phone) {
+      max-width: 60%;
+    }
+
+  }
+  &__paragraph {
+    max-width: 58rem;
+    margin: 0 auto;
+    margin-bottom: 4.6rem;
+    color: $white;
+    line-height: 1.6;
+
+    @include respond(tablet) {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+    }
+
+    @include respond(phone-big) {
+      display: none;
+    }
+  }
+
+  &__btn--slider {
+    @include respond(phone-big) {
+      display: none;
+    }
+  }
+
+  &__heading--slider {
+    margin-bottom: 2rem;
+
+    @include respond(tablet) {
+      font-size: 3.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+
+.section-news {
+  padding-top: 9.9rem;
+  padding-bottom: 10.9rem;
+
+  @include respond(tablet) {
+    padding: 5.1rem 0 4.2rem 0;
+  }
+
+  @include respond(phone) {
+    padding: 2rem 0 5rem 0;
+  }
+
+  &__btn-container {
+    text-align: center;
+  }
+}
+
+.footer {
+  width: 100%;
+  background-color:$footer-color;
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid $border-gray;
+
+  @include respond(tablet) {
+    padding: 3.8rem 0 2.5rem 0;
+  }
+
+  &__copyright {
+    font-family: 'Museo Sans 500', sans-serif;
+    color: $text-color-gray;
+    font-size: 1.4rem;
+    float: left;
+  }
+
+  &__social {
+    float: right;
+    transition: all .3s;
+
+    &-icon {
+      display: inline-block;
+
+      &:not(:first-child) {
+        margin-left: .8rem;
+      }
+
+      &--img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  @include respond(phone) {
+    padding: 2rem 0;
+
+    &-copyright {
+      font-size: 1.1rem;
+    }
+
+    &-social {
+
+      &-icon {
+        display: inline-block;
+        height: 1.2rem;
+
+        &:not(:first-child) {
+          margin-left: .8rem;
+        }
+
+        &-img {
+          width: auto;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

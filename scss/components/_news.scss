@@ -1,0 +1,77 @@
+.section-news{
+  &__card {
+    @include respond(phone) {
+      padding: 2.1rem 0;
+    }
+
+    transition: all .3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__photo-container {
+    position: relative;
+  
+    @include respond(phone) {
+      display: inline-block;
+      width: 8.5rem;
+      height: 8.5rem;
+    }
+  
+    
+  }
+  &__photo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+
+    @include respond(phone) {
+      height: 100%;
+      margin-bottom: 0;
+    }
+    
+
+  }
+  &__desc-container {
+    @include respond(phone) {
+      display: inline-block;
+      width: 60%;
+      margin-left: .5rem;
+    }
+  }
+  &__month {
+    margin-bottom: 2.2rem;
+    color: $text-color-gray-light;
+  
+    @include respond(tablet) {
+      font-size: 1.4rem;
+      margin-bottom: 1.1rem;
+    }
+  
+    @include respond(phone-med) {
+      font-size: 1.3rem;
+    }
+  }
+  
+  &__description {
+    font-size: 3rem;
+    line-height: 1.4;
+  
+    @include respond(tablet) {
+      font-size: 1.8rem;
+    }
+  
+    @include respond(phone-med) {
+      font-size: 1.5rem;
+    }
+  }
+
+}
+
+
+
+
+
+

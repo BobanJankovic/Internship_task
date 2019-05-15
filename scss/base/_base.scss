@@ -1,0 +1,32 @@
+@include font(100,'Museo Sans 100');
+@include font(300,'Museo Sans 300');
+@include font(700,'Museo Sans 700');
+@include font(100,'Museo Sans 900');
+@include font(100,'Museo Sans 500');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $white;
+  overflow-x: hidden;
+}
+
+// WHEN SIDENAV IS EXPANDED
+.main,
+.header,
+.footer {
+  width: 100%;
+  transition: all .3s;
+}

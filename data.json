@@ -1,0 +1,20 @@
+{
+  "1": {
+    "path": "images/slide1.jpg",
+    "title": "Itaque earum rerum hic tenetur",
+    "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti",
+    "btnText": "Contact us  &#10095;"
+  },
+  "2": {
+    "path": "images/slide2.jpg",
+    "title": "Nam libero tempore, cum soluta",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in urna quis neque porttitor sagittis.",
+    "btnText": "Read more  &#10095;"
+  },
+  "3": {
+    "path": "images/slide3.jpg",
+    "title": "Itaque earum rerum hic tenetur",
+    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    "btnText": "Read more  &#10095;"
+  }
+}

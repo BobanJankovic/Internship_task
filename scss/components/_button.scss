@@ -1,0 +1,150 @@
+.section-hero__btn,
+.section-news__btn,
+.section-slider__btn  {
+
+  &:link,
+  &:visited {
+    display: inline-block;
+    font-family: 'Museo Sans 700',sans-serif;
+    text-decoration: none;
+    font-size: 1.6rem;
+  }
+
+  &--blue {
+    &:link,
+    &:visited {
+      font-size: 1.8rem;
+      color: $white;
+      background-color: $btn-blue;
+      width: 17rem;
+      height: 5rem;
+      line-height: 5rem;
+      border-radius: 100px;
+      transition: all .3s;
+      position: relative;
+
+      @include respond(phone) {
+        width: 11.9rem;
+        font-size: 1.3rem;
+        height: 3.75rem;
+        line-height: 3.75rem;
+      }
+    }
+  }
+
+  &--link {
+    &:link,
+    &:visited {
+      color: $white;
+      background-color: $btn-slider;
+      border-radius: 100px;
+      width: 13rem;
+      height: 4rem;
+      line-height: 4rem;
+      transition: all .3s;
+
+      @include respond(tablet) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &--trans {
+    &:link,
+    &:visited {
+      color: $btn-blue;
+      background-color: $white;
+      width: 15rem;
+      height: 4rem;
+      line-height: 4rem;
+      text-decoration: none;
+      border: 2px solid $btn-blue;
+      border-radius: 100px;
+      text-align: center;
+      transition: all .3s;
+      margin-top: 6.5rem;
+
+      @include respond(tablet) {
+        margin-top: 2.3rem;
+      }
+
+      @include respond(phone) {
+        margin-top: .7rem;
+        width: 12.5rem;
+        height: 3.75rem;
+        font-size: 1.3rem;
+        line-height: 3.75rem;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-color: $btn-blue;
+      color: $white;
+      transform: translateY(-.5rem);
+      box-shadow: 0 2rem 3rem rgba(0, 0, 0, .3);
+    }
+  }
+
+  &--blue:hover,
+  &--blue:active,
+  &--slider:hover,
+  &--slider:active {
+    background-color: $btn-dark-blue;
+    transform: translateY(-.5rem);
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, .3);
+  }
+
+}
+.section-slider__btn-control {
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 50%;
+  border: 5px solid $white;
+  background-color: transparent;
+  outline: none;
+  color: $white;
+  font-size: 3rem;
+  line-height: 3rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform .3s;
+
+  @include respond(tablet) {
+    height: 4.2rem;
+    width: 4.2rem;
+    font-size: 2rem;
+    border: 3px solid $white;
+    line-height: 2rem;
+  }
+
+  @include respond(phone) {
+    height: 2.1rem;
+    width: 2.1rem;
+    font-size: 1.2rem;
+    border: 2px solid $white;
+    line-height: 1.2rem;
+  }
+
+  &--pr {
+    left: 14%;
+
+    @include respond(tab-land) {
+      left: 2.5rem;
+    }
+  }
+
+  &--ne {
+    right: 14%;
+
+    @include respond(tab-land) {
+      right: 2.5rem;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-60%);
+  }
+}

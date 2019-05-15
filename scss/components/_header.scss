@@ -1,0 +1,148 @@
+.header {
+  position: relative;
+  width: 100%;
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.6rem;
+
+    &,
+    &::before,
+    &::after {
+      height: 2px;
+      background-color: $btn-nav;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1.9rem;
+      left: 0;
+      transition: all .2s;
+    }
+
+    &::before {
+      top: -.5rem;
+    }
+
+    &::after {
+      top: .5rem;
+    }
+  }
+
+  &__button  {
+    height: 4rem;
+    width: 4rem;
+    border: 2px solid $btn-nav;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 2rem;
+    right: 2.2rem;
+    text-align: center;
+    visibility: hidden;
+    cursor: pointer;
+
+    @include respond(tablet) {
+      visibility: visible;
+    }
+
+    @include respond(phone) {
+      height: 3rem;
+      width: 3rem;
+      top: 1.7rem;
+      right: 2rem;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -.4rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: .4rem;
+  }
+
+  &__logo {
+    float: left;
+    margin-top: 4rem;
+  
+    @include respond(tablet) {
+      margin-top: 2rem;
+      margin-bottom: 1.3rem;
+    }
+  
+    @include respond(phone) {
+      margin-top: 1.7rem;
+      margin-bottom: 1.3rem;
+    }
+  
+    &-img {
+      width: 20rem;
+      height: 5.6rem;
+  
+      @include respond(tablet) {
+        width: 14rem;
+        height: 4rem;
+      }
+  
+      @include respond(phone) {
+        width: 10rem;
+        height: auto;
+      }
+    }
+    
+  }
+  &__item {
+    list-style: none;
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      position: relative;
+      font-family: 'Museo Sans 700';
+      font-size: 1.8rem;
+      color: $text-color-dark;
+      text-decoration: none;
+      border-bottom: 5px solid transparent;
+      padding-bottom: 4.1rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 0;
+      border-bottom: 5px solid $blue;
+      transition: all .3s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+  }
+
+  &__navigation {
+    margin-top: 7.4rem;
+    margin-bottom: 4.5rem;
+    float: right;
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+  
+}
+
+
+

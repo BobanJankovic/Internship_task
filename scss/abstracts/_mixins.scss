@@ -1,0 +1,51 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+@mixin respond($breakpoint) {
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 320px) {
+      @content
+    };
+  }
+
+  @if $breakpoint==phone-med {
+    @media only screen and (max-width: 480px) {
+      @content
+    };
+  }
+
+  @if $breakpoint==phone-big {
+    @media only screen and (max-width: 650px) {
+      @content
+    };
+  }
+
+  @if $breakpoint==tablet {
+    @media only screen and (max-width: 768px) {
+      @content
+    };
+  }
+
+  @if $breakpoint==tab-land {
+    @media only screen and (max-width: 1250px) {
+      @content
+    };
+  }
+}
+
+@mixin font($type,$name){
+  @font-face {
+    font-family: $name;
+    src: url('../../fonts/MuseoSans-'+$type+'.woff2') format('woff2'),
+        url('../../fonts/MuseoSans-'+$type+'.woff') format('woff'),
+        url('../../fonts/MuseoSans-'+$type+'.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+}

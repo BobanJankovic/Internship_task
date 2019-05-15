@@ -1,0 +1,11 @@
+"use strict";document.addEventListener("DOMContentLoaded",function(){
+//Note: I have used HttpRequest , because fetch function is not supported in IE.
+/*fetch("../data.json").then((response) => response.json()).then((json) => {
+    const arrObj = Object.keys(json).map(key => json[key]);
+    loadSlides(arrObj);
+  }).catch(error => alert(error + ". Please run on local-host server"));*/
+var xhr=new XMLHttpRequest;xhr.open("GET","../data.json",!0),xhr.onload=function(){var _this=this;200===this.status&&loadSlides(Object.keys(JSON.parse(this.responseText)).map(function(key){return JSON.parse(_this.responseText)[key]}))},xhr.send();
+//Sidenavigation
+var btn=document.querySelector(".header__button"),sideNav=document.querySelector(".sidenav"),sideText=document.querySelector(".sidenav__navigation"),headerEl=document.querySelector(".header"),mainEl=document.querySelector(".main"),footerEl=document.querySelector(".footer"),sectionHero=document.querySelector(".section-hero"),nav=!1;btn.addEventListener("click",function(){(nav=!nav)?(headerEl.style.marginLeft="-72.5%",mainEl.style.marginLeft="-72.5%",footerEl.style.marginLeft="-72.5%",sectionHero.style.marginLeft="-72.5%",sideNav.style.width="72.5%",sideText.style.opacity="1"):(headerEl.style.marginLeft="0",mainEl.style.marginLeft="0",footerEl.style.marginLeft="0",sectionHero.style.marginLeft="0",sideNav.style.width="0",sideText.style.opacity="0")})});
+//Section Slider
+var slideBcg=document.querySelector(".section-slider"),slideTitle=document.querySelector(".section-slider__heading--slider"),slideParagraph=document.querySelector(".section-slider__paragraph--slider"),slideButton=document.querySelector(".section-slider__btn--link"),index=0;function loadSlides(data){showSlide(data),document.querySelector(".section-slider__btn-control--ne").addEventListener("click",function(){return index>=data.length-1?index=data.length-1:index++,showSlide(data)}),document.querySelector(".section-slider__btn-control--pr").addEventListener("click",function(){return 0===index?index=0:index--,showSlide(data)})}function showSlide(slides){slideBcg.style.backgroundImage="url("+slides[index].path+")",slideTitle.innerHTML=slides[index].title,slideParagraph.innerHTML=slides[index].description,slideButton.innerHTML=slides[index].btnText}

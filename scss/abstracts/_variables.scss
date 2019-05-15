@@ -1,0 +1,26 @@
+// Grid
+$grid-width:118.1rem;
+$gutter-horizontal: 2rem;
+
+@include respond(tablet) {
+  $gutter-horizontal: 2.4rem;
+}
+
+$gutter-vertical: 4rem;
+
+// Color
+$white: #fff;
+$white-darker: #fbfbfb;
+$blue: #0050ff;
+$btn-blue:#004ffb;
+$btn-dark-blue:#003dc0;
+$btn-slider: #0050ff;
+$btn-nav: #3b42f3;
+$side-nav-blue: #121e3e;
+$text-color-dark: #081f3f;
+$footer-color: #f7f7f7;
+$text-color-gray:#939ca8;
+$text-color-gray-light: #bec0c5;
+$text-color-blue: #0050ff;
+$border-gray: #e6e6e6;
+$border-blue: #2a3552;
